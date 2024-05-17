@@ -51,4 +51,4 @@ jobs:
 
       - name: Push tag YC Registry
         run: |
-          docker push cr.yandex/${{ secrets.YC_REGISTRY_ID }}/delivery-service:latest
+          docker push cr.yandex/${{ secrets.YC_REGISTRY_ID }}/appointment-service:latest
