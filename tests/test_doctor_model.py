@@ -4,6 +4,7 @@ from pydantic import ValidationError
 
 from app.models.doctor import Doctor
 
+
 def test_doctor_creation():
 	id = 1
 	name = 'Bill'
@@ -13,5 +14,5 @@ def test_doctor_creation():
 
 def test_doctor_name_required():
     with pytest.raises(ValidationError):
-        Doctor(doctor_id=id)
+        Doctor(doctor_id = id)
 

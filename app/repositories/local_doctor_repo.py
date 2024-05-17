@@ -3,6 +3,7 @@ from app.models.doctor import Doctor
 
 doctors: list[Doctor] = [
     Doctor(doctor_id=1, doctor_name='Steve'),
+    Doctor(doctor_id=2, doctor_name='Bill')
 ]
 
 
@@ -21,5 +22,3 @@ class DoctorsRepo:
             if doctor.doctor_name == doctor_name:
                 return doctor
         raise KeyError("Doctor not found")
-
-    # You can add functions for creating, updating, and deleting doctors here (remember to implement persistence)

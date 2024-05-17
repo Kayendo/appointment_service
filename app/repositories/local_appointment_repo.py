@@ -2,7 +2,7 @@ from uuid import UUID
 from datetime import datetime
 from app.models.appointment import Appointment
 
-appointments: list[Appointment] = []
+appointments: list[Appointment] = [Appointment(appointment_id=1, cabinet = 2, doctors_name='Steve')]
 
 
 class AppointmentsRepo:
@@ -10,8 +10,8 @@ class AppointmentsRepo:
         return appointments
 
     def get_appointment_by_id(self, appointment_id: int) -> Appointment:
-        for appointment in self.appointments:
-            if appointment.id == appointment_id:
+        for appointment in appointments:
+            if appointment.appointment_id == appointment_id:
                 return appointment
         raise KeyError("Appointment not found")
 

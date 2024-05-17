@@ -20,5 +20,5 @@ class AppointmentService:
 
     def create_appointment(self, doctors_name, cabinet):
         doctor = self.doctors_repo.get_doctor_by_name(doctors_name)
-        appointment = Appointment(appointment_id = random.randint(0, 19), doctors_name = doctors_name,  cabinet = cabinet )
+        appointment = Appointment(appointment_id = random.randint(0, 19), doctors_name = doctor.doctor_name,  cabinet = cabinet )
         return self.appointments_repo.create_appointment(appointment)
