@@ -2,7 +2,7 @@ from uuid import UUID
 from datetime import datetime
 from app.models.appointment import Appointment
 
-appointments: list[Appointment] = [Appointment(appointment_id=1, cabinet = 2, doctors_name='Steve')]
+appointments: list[Appointment] = []
 
 
 class AppointmentsRepo:
