@@ -4,7 +4,7 @@ from app import rabbitmq
 from app.settings import settings
 from app.endpoints.router import appointment_router
 
-app = FastAPI(title='Delivery Service') 
+app = FastAPI(title='Appointment Service') 
 
 @app.on_event('startup') 
 def startup(): 
